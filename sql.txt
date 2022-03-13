@@ -1,8 +1,8 @@
-CREATE DATABASE Node1;
+CREATE DATABASE Sensor;
 CREATE USER 'user1'@'localhost' IDENTIFIED WITH mysql_native_password BY 'A65DG2188GFH43';
 GRANT ALL on sensor.* to 'user1'@'localhost';
 
-USE sensor;
+USE Sensor;
 
 CREATE TABLE Data1 (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
