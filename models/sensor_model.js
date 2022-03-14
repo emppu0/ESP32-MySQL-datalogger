@@ -1,6 +1,6 @@
 const db = require('../database');
 
-const Data1 = {
+const sensor = {
   getById: function(id, callback) {
     return db.query('select * from Data1 where id=?', [id], callback);
   },
@@ -25,4 +25,4 @@ const Data1 = {
     );
   }
 };
-module.exports = Data1;
+module.exports = sensor;

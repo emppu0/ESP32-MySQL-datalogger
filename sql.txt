@@ -1,0 +1,13 @@
+CREATE DATABASE Sensor;
+CREATE USER 'user1'@'localhost' IDENTIFIED WITH mysql_native_password BY 'do not look here';
+GRANT ALL on sensor.* to 'user1'@'localhost';
+
+USE Sensor;
+
+CREATE TABLE Data1 (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    value1 VARCHAR(10),
+    value2 VARCHAR(10),
+    value3 VARCHAR(10),
+    reading_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
