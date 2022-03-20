@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<style>
+   table,
+   td,
+   th {
+      border: 1px solid black;
+   }
+
+   table {
+      border-collapse: collapse;
+      width: 100%;
+   }
+
+   td {
+      height: 50px;
+      text-align: center;
+   }
+</style>
+</style>
+
+<head>
+   <title>ESP32 Data</title>
+</head>
+</body>
+<h1>ESP32 Data</h1>
+
+<table style="width:40%">
+   <tr>
+      <th>Temperature (°C)</th>
+      <th>Humidity (%)</th>
+      <th>Co2 (ppm)</th>
+      <th>Measurement time</th>
+   </tr>
+
+
+   <% for (var i=0; i < obj.length; i++) { %>
+      <tr>
+         <td>
+            <%= obj[i].value1 %>
+         </td>
+         <td>
+            <%= obj[i].value2 %>
+         </td>
+         <td>
+            <%= obj[i].value3 %>
+         </td>
+         <td>
+            <%= obj[i].reading_time %>
+         </td>
+
+      </tr>
+      <% } %>
+</table>
+</body>
+
+</html>
