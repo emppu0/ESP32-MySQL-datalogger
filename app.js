@@ -8,7 +8,7 @@ const cors = require('cors');
 
 
 const sensorRouter = require('./routes/sensor');
-const chartsRouter = require('./routes/charts');
+const tableRouter = require('./routes/table');
 const indexRouter = require('./routes/index');
 //const basicAuth = require('express-basic-auth');
 
@@ -28,7 +28,7 @@ app.use(cors());
 
 app.use('/index', indexRouter);
 app.use('/sensor', sensorRouter);
-app.use('/charts', chartsRouter);
+app.use('/table', tableRouter);
 
 app.get('/about', function(req, res) {
   res.render('page');
