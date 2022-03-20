@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+    <title>Home</title> <!-- website title-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style> /*css styling*/
+        
+        body {
+            margin: 0;
+            font-family: sans-serif; /* use sans-serif font*/
+        }
+
+        .header {
+            padding: 40px; /*header size*/
+            text-align: center; /*header text align*/
+            color: white; /*header text color*/
+            background: #da0909; /*header background color*/
+        }
+
+        .bar {
+            overflow: hidden;
+            background-color: rgb(54, 52, 52); /* navigation bar color*/
+        }
+
+        .bar a:hover { /* change box color when hovering over it*/
+            background-color:rgb(77, 75, 75);  /* hovering color*/
+        }
+
+        .bar a {
+            float: right; /*boxes from right to left*/
+            text-decoration: none; /*remove hyperlink lines from boxes*/
+            text-align: center; /*align box text to center*/
+            color: white; /* box text color*/
+            padding: 20px 20px; /* navigation bar size*/
+            
+        }
+
+        
+
+        main {
+            background-color: white; /* main background color*/
+            padding: 100px; /* padding for data*/
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <h1>Smart home</h1> <!--header text-->
+
+        </div>
+
+        <div class="bar"> <!--create list with links to pages: Home, about, privacy policy and Github-->
+            <a href="home" class="active">Home</a>
+            <a href="about">About</a>
+            <a href="privacy-policy">Privacy policy</a>
+            <a href="github" class="right">Github</a>
+        </div>
+    </header>
+    <main>
+
+        <div class="main">
+            <h2>Measurements:</h2> <!--header text-->
+
+            <ul> <!--create list with links to pages: index, table and chart-->
+                <li><a href="index"> Latest ESP32 reading</a></li> 
+                <li><a href="table"> ESP32 readings table</a></li> 
+                <li><a href="chart"> ESP32 readings chart</a></li>
+            </ul>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <!--footer not yet implemented-->
+    </footer>
+
+</body>
+
+</html>

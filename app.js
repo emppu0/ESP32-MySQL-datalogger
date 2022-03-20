@@ -10,6 +10,7 @@ const cors = require('cors');
 const sensorRouter = require('./routes/sensor');
 const tableRouter = require('./routes/table');
 const indexRouter = require('./routes/index');
+const chartRouter = require('./routes/chart');
 //const basicAuth = require('express-basic-auth');
 
 
@@ -29,9 +30,10 @@ app.use(cors());
 app.use('/index', indexRouter);
 app.use('/sensor', sensorRouter);
 app.use('/table', tableRouter);
+app.use('/chart', chartRouter);
 
-app.get('/about', function(req, res) {
-  res.render('page');
+app.get('/', function(req, res) {
+  res.render('home');
 });
 
 module.exports = app;
